@@ -5,9 +5,10 @@ import com.badlogic.gdx.InputAdapter;
 
 import me.lihq.game.GameMain;
 import me.lihq.game.Settings;
-import me.lihq.game.people.AbstractPerson.Direction;
 import me.lihq.game.people.Player;
 import me.lihq.game.screen.PauseScreen;
+
+import static me.lihq.game.people.AbstractPerson.Direction;
 
 /**
  * This class allows the player to be moved and controlled.
