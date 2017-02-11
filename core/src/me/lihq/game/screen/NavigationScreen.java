@@ -139,7 +139,7 @@ public class NavigationScreen extends AbstractScreen
 
         tiledMapRenderer = new OrthogonalTiledMapRendererWithPeople(game.player.getRoom().getTiledMap());
 
-        playerController = new PlayerController(game.player);
+        playerController = new PlayerController(game.player, game);
 
         spriteBatch = new SpriteBatch();
 
