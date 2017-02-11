@@ -201,7 +201,7 @@ public abstract class AbstractPerson extends Sprite
     }
 
     /**
-     * Reads in the JSON file of tha character and stores dialogue in the dialogue HashMap
+     * Reads in the JSON file of that character and stores dialogue in the dialogue HashMap
      *
      * @param fileName
      */
