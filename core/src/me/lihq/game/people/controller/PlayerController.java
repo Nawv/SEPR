@@ -6,7 +6,6 @@ import me.lihq.game.Settings;
 import me.lihq.game.people.Player;
 
 import static me.lihq.game.people.AbstractPerson.Direction;
-import static me.lihq.game.people.AbstractPerson.PersonState;
 
 /**
  * This class allows the player to be moved and controlled.
