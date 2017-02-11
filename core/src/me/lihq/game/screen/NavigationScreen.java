@@ -181,6 +181,7 @@ public class NavigationScreen extends AbstractScreen
             playerController.update();
             game.player.update();
             arrow.update();
+            statusBar.update();
 
             for (AbstractPerson n : currentNPCS) {
                 n.update();

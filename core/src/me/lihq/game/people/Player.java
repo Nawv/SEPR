@@ -30,7 +30,7 @@ public class Player extends AbstractPerson
     /**
      * The score the player has earned so far.
      */
-    private int score = 0;
+    public static int score = 0;
 
     /**
      * This is the constructor for player, it creates a new playable person
@@ -153,6 +153,7 @@ public class Player extends AbstractPerson
         if (clueFound != null) {
             GameMain.me.getNavigationScreen().speechboxMngr.addSpeechBox(new SpeechBox("You found: " + clueFound.getDescription(), 6));
             this.collectedClues.add(clueFound);
+            Player.score += 50;
 
             // set all NPCs ignored to false
             for (NPC character : GameMain.me.NPCs) {

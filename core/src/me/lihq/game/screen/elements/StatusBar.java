@@ -15,7 +15,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+
 import me.lihq.game.GameMain;
+import me.lihq.game.people.Player;
 import me.lihq.game.screen.PauseScreen;
 
 /**
@@ -55,6 +57,11 @@ public class StatusBar
     private Skin buttonSkin;
     private Skin labelSkin;
     private PauseScreen pauseScreen;
+    
+    /**
+     * Label for scoring shown at bottom of game UI
+     */
+    private Label scoreLabel;
 
     /**
      * The initializer for the StatusBar
@@ -72,7 +79,7 @@ public class StatusBar
         statusBar.row().height(HEIGHT);
         statusBar.defaults().width(WIDTH);
 
-        Label scoreLabel = new Label("Score: 0", labelSkin);
+        scoreLabel = new Label("Score: " + Player.score, labelSkin);
         scoreLabel.setAlignment(Align.center, Align.center);
         statusBar.add(scoreLabel).uniform();
 
@@ -108,6 +115,14 @@ public class StatusBar
     {
         stage.act();
         stage.draw();
+    }
+    
+    /**
+     * Updates the status bar to keep the score updated as the player progresses in the game
+     * Called within the update() method of the navigation screen
+     */
+    public void update() {
+    	scoreLabel.setText("Score: " + Player.score);
     }
 
     /**
